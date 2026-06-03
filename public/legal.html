@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="lTitle">Legal — Medical Ozone Care</title>
+  <meta name="description" content="Legal information for Medical Ozone Care." />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <style>
+    .legal-doc { max-width: 820px; margin: 0 auto; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(26px,4vw,48px); box-shadow: var(--shadow); }
+    .legal-doc h3 { margin: 28px 0 8px; color: var(--navy); font-size: 1.2rem; }
+    .legal-doc p { color: var(--ink); line-height: 1.75; }
+    .legal-doc .callout { margin: 18px 0; }
+    .legal-nav { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 30px; }
+    .legal-nav a { padding: 8px 16px; border-radius: 100px; border: 1px solid var(--line); background: #fff; color: var(--muted); font-weight: 600; font-size: .9rem; }
+    .legal-nav a.active, .legal-nav a:hover { background: var(--teal-d); color: #fff; border-color: var(--teal-d); }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="page-hero" style="padding-bottom:50px">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a> <span>/</span> <span id="bc">Legal</span></div>
+      <h1 id="hTitle">Legal</h1>
+      <p class="lead">Please read the following information carefully.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <nav class="legal-nav">
+        <a href="/terms" data-slug="terms">Terms &amp; Conditions</a>
+        <a href="/privacy" data-slug="privacy">Privacy Policy</a>
+        <a href="/disclaimer" data-slug="disclaimer">Disclaimer</a>
+        <a href="/warranty" data-slug="warranty">Warranty Policy</a>
+        <a href="/usage" data-slug="usage">Usage Disclaimer</a>
+      </nav>
+      <article class="legal-doc" id="doc"><div class="skeleton" style="height:300px"></div></article>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="/js/app.js"></script>
+  <script src="/js/legal.js"></script>
+</body>
+</html>

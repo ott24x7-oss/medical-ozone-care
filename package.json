@@ -1,0 +1,30 @@
+{
+  "name": "medical-ozone-care",
+  "version": "1.0.0",
+  "description": "Official website for Medical Ozone Care — medical ozone therapy equipment (AOT-MD-520 ozone generator, oxygen regulators & accessories). Full-stack: Express + SQLite backend, responsive frontend.",
+  "type": "module",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/server.js",
+    "start:prod": "node --disable-warning=ExperimentalWarning --env-file-if-exists=.env server/server.js",
+    "dev": "node --disable-warning=ExperimentalWarning --env-file-if-exists=.env --watch server/server.js",
+    "svgs": "python tools/gen_svgs.py"
+  },
+  "keywords": [
+    "medical-ozone",
+    "ozone-therapy",
+    "ozone-generator",
+    "AOT-MD-520",
+    "oxygen-regulator"
+  ],
+  "author": "Medical Ozone Care (Shekhar Pathak)",
+  "license": "UNLICENSED",
+  "private": true,
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemailer": "^8.0.10"
+  }
+}

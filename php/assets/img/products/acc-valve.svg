@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 360" role="img" aria-label="3-way valve lock" width="460" height="360">
+<title>3-way valve lock</title>
+<defs>
+  <linearGradient id="bgavalve" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E0F7FB"/></linearGradient>
+  <linearGradient id="clearvalve" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EAF6FA"/><stop offset="0.5" stop-color="#CDEAF2"/><stop offset="1" stop-color="#AFD9E6"/></linearGradient>
+  <linearGradient id="steelavalve" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D7DEE4"/><stop offset="1" stop-color="#6B7884"/></linearGradient>
+  <filter id="dsavalve" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#0B3A52" flood-opacity="0.18"/></filter>
+</defs>
+<rect width="460" height="360" fill="url(#bgavalve)"/>
+<ellipse cx="230" cy="300" rx="120" ry="20" fill="#0B3A52" opacity="0.10"/>
+<g filter="url(#dsavalve)">
+<rect x="120" y="172" width="220" height="34" rx="17" fill="url(#clearvalve)" stroke="#9FC8D6" stroke-width="2"/>
+<rect x="212" y="206" width="34" height="70" rx="14" fill="url(#clearvalve)" stroke="#9FC8D6" stroke-width="2"/>
+<circle cx="229" cy="168" r="26" fill="#2E73C8"/>
+<rect x="221" y="120" width="16" height="60" rx="6" fill="#2E73C8"/>
+<rect x="190" y="160" width="78" height="16" rx="8" fill="#1f5aa8"/>
+<rect x="100" y="180" width="20" height="18" rx="5" fill="url(#steelavalve)"/>
+<rect x="340" y="180" width="20" height="18" rx="5" fill="url(#steelavalve)"/>
+</g>
+<text x="230" y="344" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#0B3A52">3-Valve Lock (Stopcock)</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 360" role="img" aria-label="Male luer lock" width="460" height="360">
+<title>Male luer lock</title>
+<defs>
+  <linearGradient id="bgaluer" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E0F7FB"/></linearGradient>
+  <linearGradient id="clearluer" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EAF6FA"/><stop offset="0.5" stop-color="#CDEAF2"/><stop offset="1" stop-color="#AFD9E6"/></linearGradient>
+  <linearGradient id="steelaluer" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D7DEE4"/><stop offset="1" stop-color="#6B7884"/></linearGradient>
+  <filter id="dsaluer" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#0B3A52" flood-opacity="0.18"/></filter>
+</defs>
+<rect width="460" height="360" fill="url(#bgaluer)"/>
+<ellipse cx="230" cy="300" rx="120" ry="20" fill="#0B3A52" opacity="0.10"/>
+<g filter="url(#dsaluer)">
+<path d="M150,150 h120 l44,28 v36 l-44,28 h-120 Z" fill="url(#clearluer)" stroke="#9FC8D6" stroke-width="2"/>
+<rect x="266" y="158" width="6" height="68" rx="2" fill="#9FC8D6" opacity="0.6"/>
+<rect x="276" y="158" width="6" height="68" rx="2" fill="#9FC8D6" opacity="0.6"/>
+<rect x="286" y="158" width="6" height="68" rx="2" fill="#9FC8D6" opacity="0.6"/>
+<rect x="296" y="158" width="6" height="68" rx="2" fill="#9FC8D6" opacity="0.6"/>
+<rect x="306" y="158" width="6" height="68" rx="2" fill="#9FC8D6" opacity="0.6"/>
+<rect x="120" y="168" width="34" height="36" rx="6" fill="url(#clearluer)" stroke="#9FC8D6" stroke-width="2"/>
+<rect x="324" y="178" width="34" height="16" rx="6" fill="url(#steelaluer)"/>
+</g>
+<text x="230" y="344" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#0B3A52">Male Luer Lock</text>
+</svg>

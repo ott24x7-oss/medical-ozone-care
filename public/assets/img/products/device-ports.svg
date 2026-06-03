@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-label="AOT-MD-520 rear ports" width="760" height="420">
+<title>AOT-MD-520 rear ports</title>
+<defs>
+  <linearGradient id="bgp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E0F7FB"/><stop offset="1" stop-color="#F4FAFC"/></linearGradient>
+  <linearGradient id="casep" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#EDF1F6"/></linearGradient>
+  <filter id="dsp" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0B3A52" flood-opacity="0.18"/></filter>
+</defs>
+<rect width="760" height="420" fill="url(#bgp)"/>
+<g filter="url(#dsp)"><rect x="60" y="120" width="640" height="200" rx="18" fill="url(#casep)" stroke="#D4DCE6" stroke-width="2"/></g>
+<text x="380" y="100" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700" fill="#0B3A52">Rear ports</text>
+<circle cx="180" cy="220" r="34" fill="#EFF3F7" stroke="#9AA7B4" stroke-width="2.5"/><circle cx="180" cy="220" r="14" fill="#6B7884"/><circle cx="180" cy="220" r="6" fill="#222"/><text x="180" y="300" text-anchor="middle" font-family="Arial" font-size="12" fill="#0B3A52">O₂ inlet</text>
+<circle cx="330" cy="220" r="34" fill="#EFF3F7" stroke="#9AA7B4" stroke-width="2.5"/><circle cx="330" cy="220" r="16" fill="#2b3640"/><path d="M330,206 v28 M316,220 h28" stroke="#7f8b96" stroke-width="3"/><text x="330" y="300" text-anchor="middle" font-family="Arial" font-size="12" fill="#0B3A52">O₃ destructor</text>
+<circle cx="480" cy="220" r="34" fill="#EFF3F7" stroke="#9AA7B4" stroke-width="2.5"/><rect x="462" y="206" width="36" height="28" rx="4" fill="#2b3640"/><rect x="470" y="214" width="6" height="12" fill="#7f8b96"/><rect x="484" y="214" width="6" height="12" fill="#7f8b96"/><text x="480" y="300" text-anchor="middle" font-family="Arial" font-size="12" fill="#0B3A52">Power socket</text>
+<circle cx="610" cy="220" r="34" fill="#EFF3F7" stroke="#9AA7B4" stroke-width="2.5"/><rect x="596" y="206" width="28" height="28" rx="4" fill="#222C34"/><rect x="601" y="214" width="18" height="12" rx="2" fill="#3a4751"/><text x="610" y="300" text-anchor="middle" font-family="Arial" font-size="12" fill="#0B3A52">Fuse / switch</text>
+</svg>

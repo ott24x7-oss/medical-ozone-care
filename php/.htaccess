@@ -1,0 +1,29 @@
+# Medical Ozone Care — Apache/LiteSpeed config (Hostinger)
+
+# Default to index.php
+DirectoryIndex index.php index.html
+
+# Block direct access to the SQLite test DB and any .db/.sqlite files
+<FilesMatch "\.(sqlite|sqlite3|db)$">
+  Require all denied
+</FilesMatch>
+
+# Block access to the config file's contents as text (it's PHP, but be safe)
+<Files "config.php">
+  Require all denied
+</Files>
+
+# Basic security headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Optional pretty URL: /products -> products.php (etc.) if mod_rewrite is on
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.php [L,QSA]
+</IfModule>

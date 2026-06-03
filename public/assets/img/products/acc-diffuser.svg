@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 360" role="img" aria-label="Stone diffusers" width="460" height="360">
+<title>Stone diffusers</title>
+<defs>
+  <linearGradient id="bgadiff" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E0F7FB"/></linearGradient>
+  <linearGradient id="cleardiff" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EAF6FA"/><stop offset="0.5" stop-color="#CDEAF2"/><stop offset="1" stop-color="#AFD9E6"/></linearGradient>
+  <linearGradient id="steeladiff" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D7DEE4"/><stop offset="1" stop-color="#6B7884"/></linearGradient>
+  <filter id="dsadiff" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#0B3A52" flood-opacity="0.18"/></filter>
+</defs>
+<rect width="460" height="360" fill="url(#bgadiff)"/>
+<ellipse cx="230" cy="300" rx="120" ry="20" fill="#0B3A52" opacity="0.10"/>
+<g filter="url(#dsadiff)">
+<rect x="144" y="120" width="52" height="120" rx="14" fill="#8A8F94"/>
+<rect x="144" y="120" width="52" height="120" rx="14" fill="url(#cleardiff)" opacity="0.10"/>
+<circle cx="158" cy="150" r="3" fill="#6f757a" opacity="0.7"/>
+<circle cx="178" cy="170" r="3" fill="#6f757a" opacity="0.7"/>
+<circle cx="166" cy="200" r="3" fill="#6f757a" opacity="0.7"/>
+<circle cx="184" cy="210" r="3" fill="#6f757a" opacity="0.7"/>
+<circle cx="154" cy="225" r="3" fill="#6f757a" opacity="0.7"/>
+<circle cx="172" cy="135" r="3" fill="#6f757a" opacity="0.7"/>
+<rect x="164" y="96" width="12" height="30" rx="4" fill="url(#steeladiff)"/>
+<rect x="264" y="120" width="52" height="120" rx="14" fill="#8A8F94"/>
+<rect x="264" y="120" width="52" height="120" rx="14" fill="url(#cleardiff)" opacity="0.10"/>
+<circle cx="278" cy="150" r="3" fill="#6f757a" opacity="0.7"/>
+<circle cx="298" cy="170" r="3" fill="#6f757a" opacity="0.7"/>
+<circle cx="286" cy="200" r="3" fill="#6f757a" opacity="0.7"/>
+<circle cx="304" cy="210" r="3" fill="#6f757a" opacity="0.7"/>
+<circle cx="274" cy="225" r="3" fill="#6f757a" opacity="0.7"/>
+<circle cx="292" cy="135" r="3" fill="#6f757a" opacity="0.7"/>
+<rect x="284" y="96" width="12" height="30" rx="4" fill="url(#steeladiff)"/>
+</g>
+<text x="230" y="344" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#0B3A52">Stone Diffuser × 2</text>
+</svg>

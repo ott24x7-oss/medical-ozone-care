@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 460" role="img" aria-label="Oxygen regulator AOT-OR-870" width="620" height="460">
+<title>Oxygen regulator AOT-OR-870</title>
+<defs>
+  <linearGradient id="bgAOTOR870" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E0F7FB"/><stop offset="1" stop-color="#F4FAFC"/></linearGradient>
+  <linearGradient id="bodyAOTOR870" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#56C46E"/><stop offset="0.5" stop-color="#2EA24E"/><stop offset="1" stop-color="#176E33"/></linearGradient>
+  <radialGradient id="gaugeAOTOR870" cx="0.4" cy="0.35" r="0.7"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E7ECEF"/></radialGradient>
+  <linearGradient id="steelAOTOR870" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D7DEE4"/><stop offset="0.5" stop-color="#9AA7B4"/><stop offset="1" stop-color="#6B7884"/></linearGradient>
+  <filter id="dsAOTOR870" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="9" stdDeviation="12" flood-color="#0B3A52" flood-opacity="0.2"/></filter>
+</defs>
+<rect width="620" height="460" fill="url(#bgAOTOR870)"/>
+<ellipse cx="310" cy="392" rx="180" ry="26" fill="#0B3A52" opacity="0.12"/>
+<g filter="url(#dsAOTOR870)">
+<rect x="150" y="210" width="240" height="96" rx="22" fill="url(#bodyAOTOR870)" stroke="#176E33" stroke-width="2"/>
+<rect x="162" y="220" width="216" height="14" rx="7" fill="#FFFFFF" opacity="0.25"/>
+<circle cx="240" cy="170" r="62" fill="url(#steelAOTOR870)"/>
+<circle cx="240" cy="170" r="52" fill="url(#gaugeAOTOR870)" stroke="#6B7884" stroke-width="2"/>
+<line x1="261.0" y1="206.4" x2="265.0" y2="213.3" stroke="#0B3A52" stroke-width="2"/>
+<line x1="276.4" y1="191.0" x2="283.3" y2="195.0" stroke="#0B3A52" stroke-width="2"/>
+<line x1="282.0" y1="170.0" x2="290.0" y2="170.0" stroke="#0B3A52" stroke-width="2"/>
+<line x1="276.4" y1="149.0" x2="283.3" y2="145.0" stroke="#0B3A52" stroke-width="2"/>
+<line x1="261.0" y1="133.6" x2="265.0" y2="126.7" stroke="#0B3A52" stroke-width="2"/>
+<line x1="240.0" y1="128.0" x2="240.0" y2="120.0" stroke="#0B3A52" stroke-width="2"/>
+<line x1="219.0" y1="133.6" x2="215.0" y2="126.7" stroke="#0B3A52" stroke-width="2"/>
+<line x1="203.6" y1="149.0" x2="196.7" y2="145.0" stroke="#0B3A52" stroke-width="2"/>
+<line x1="198.0" y1="170.0" x2="190.0" y2="170.0" stroke="#0B3A52" stroke-width="2"/>
+<line x1="203.6" y1="191.0" x2="196.7" y2="195.0" stroke="#0B3A52" stroke-width="2"/>
+<line x1="219.0" y1="206.4" x2="215.0" y2="213.3" stroke="#0B3A52" stroke-width="2"/>
+<line x1="240" y1="170" x2="276" y2="138" stroke="#D0342C" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="240" cy="170" r="6" fill="#0B3A52"/>
+<text x="240" y="210" text-anchor="middle" font-family="Arial" font-size="9" fill="#6B7884">O₂  MPa</text>
+<circle cx="372" cy="258" r="30" fill="url(#steelAOTOR870)" stroke="#6B7884" stroke-width="2"/>
+<line x1="394.0" y1="258.0" x2="401.0" y2="258.0" stroke="#6B7884" stroke-width="2"/>
+<line x1="391.1" y1="269.0" x2="397.1" y2="272.5" stroke="#6B7884" stroke-width="2"/>
+<line x1="383.0" y1="277.1" x2="386.5" y2="283.1" stroke="#6B7884" stroke-width="2"/>
+<line x1="372.0" y1="280.0" x2="372.0" y2="287.0" stroke="#6B7884" stroke-width="2"/>
+<line x1="361.0" y1="277.1" x2="357.5" y2="283.1" stroke="#6B7884" stroke-width="2"/>
+<line x1="352.9" y1="269.0" x2="346.9" y2="272.5" stroke="#6B7884" stroke-width="2"/>
+<line x1="350.0" y1="258.0" x2="343.0" y2="258.0" stroke="#6B7884" stroke-width="2"/>
+<line x1="352.9" y1="247.0" x2="346.9" y2="243.5" stroke="#6B7884" stroke-width="2"/>
+<line x1="361.0" y1="238.9" x2="357.5" y2="232.9" stroke="#6B7884" stroke-width="2"/>
+<line x1="372.0" y1="236.0" x2="372.0" y2="229.0" stroke="#6B7884" stroke-width="2"/>
+<line x1="383.0" y1="238.9" x2="386.5" y2="232.9" stroke="#6B7884" stroke-width="2"/>
+<line x1="391.1" y1="247.0" x2="397.1" y2="243.5" stroke="#6B7884" stroke-width="2"/>
+<circle cx="372" cy="258" r="10" fill="#0B3A52"/>
+<rect x="250" y="306" width="20" height="40" fill="url(#steelAOTOR870)"/>
+<path d="M244,346 h32 l-4,10 h-24 Z" fill="#6B7884"/>
+<rect x="256" y="356" width="8" height="22" rx="3" fill="#9AA7B4"/>
+<rect x="96" y="226" width="60" height="64" rx="10" fill="url(#steelAOTOR870)" stroke="#6B7884" stroke-width="2"/><rect x="120" y="200" width="16" height="40" rx="4" fill="url(#steelAOTOR870)"/><circle cx="112" cy="276" r="4" fill="#0B3A52"/><circle cx="124" cy="276" r="4" fill="#0B3A52"/><circle cx="128" cy="220" r="9" fill="#CBA13A"/>
+</g>
+<text x="310" y="430" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#0B3A52">AOT-OR-870</text>
+</svg>

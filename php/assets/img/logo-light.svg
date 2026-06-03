@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 120" role="img" aria-label="Medical Ozone Care" width="460" height="120">
+<title>Medical Ozone Care</title>
+<defs>
+  <radialGradient id="sph0" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#7FE8F5"/><stop offset="0.6" stop-color="#0AA2B8"/><stop offset="1" stop-color="#055468"/></radialGradient>
+  <radialGradient id="sph1" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#5FD0E0"/><stop offset="0.6" stop-color="#077E92"/><stop offset="1" stop-color="#055468"/></radialGradient>
+  <radialGradient id="sph2" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#AEF6FF"/><stop offset="0.6" stop-color="#22D3EE"/><stop offset="1" stop-color="#077E92"/></radialGradient>
+</defs>
+<rect width="42" height="42" x="0" y="0" fill="none"/>
+<line x1="56" y1="52.0" x2="20.0" y2="74.0" stroke="#0AA2B8" stroke-width="6.4" opacity="0.6"/>
+<line x1="56" y1="52.0" x2="92.0" y2="74.0" stroke="#0AA2B8" stroke-width="6.4" opacity="0.6"/>
+<circle cx="56" cy="52.0" r="20.0" fill="url(#sph0)"/>
+<circle cx="20.0" cy="74.0" r="20.0" fill="url(#sph1)"/>
+<circle cx="92.0" cy="74.0" r="20.0" fill="url(#sph2)"/>
+<text x="100" y="52" font-family="Segoe UI,Arial,sans-serif" font-size="34" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">Medical Ozone</text>
+<text x="100" y="86" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="600" fill="#7DD3FC" letter-spacing="6">C A R E</text>
+</svg>
