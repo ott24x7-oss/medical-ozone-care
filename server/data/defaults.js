@@ -20,7 +20,7 @@ export const defaultSettings = {
   seo: {
     siteTitle: "Medical Ozone Care — Medical Ozone Generator AOT-MD-520",
     siteDescription:
-      "Medical Ozone Care supplies the AOT-MD-520 medical ozone generator, a digital V/C ozone generator, an ozone water & oil system, oxygen regulators and accessories. Product information, specifications and quotation enquiry. New Delhi, India.",
+      "Medical Ozone Care supplies the AOT-MD-520 medical ozone generator, a fully touch-screen automated digital ozone generator, an ozone water & oil system, oxygen regulators and accessories. Product information, specifications and quotation enquiry. New Delhi, India.",
     keywords:
       "Medical Ozone Care, Medical Ozone Generator, AOT-MD-520, Ozone Generator Specifications, Medical Ozone Equipment India, Ozone Therapy Equipment, ozone water oil machine",
     ogImage: "/assets/img/products/device-hero.svg",

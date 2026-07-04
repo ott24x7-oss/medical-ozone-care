@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" role="img" aria-label="ISO 13485:2016 certified — medical devices quality management" width="260" height="260">
+<title>ISO 13485:2016 — Medical Devices Quality Management</title>
+<defs>
+  <linearGradient id="isoRing" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1F6FEB"/><stop offset="1" stop-color="#077E92"/></linearGradient>
+  <linearGradient id="isoFace" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#EAF4FB"/></linearGradient>
+  <filter id="isoShadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0B3A52" flood-opacity="0.22"/></filter>
+</defs>
+<g filter="url(#isoShadow)">
+  <!-- outer seal -->
+  <circle cx="130" cy="108" r="96" fill="url(#isoRing)"/>
+  <circle cx="130" cy="108" r="96" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
+  <circle cx="130" cy="108" r="78" fill="url(#isoFace)"/>
+</g>
+<!-- curved top text -->
+<defs><path id="isoTop" d="M 130 108 m -64 0 a 64 64 0 1 1 128 0" fill="none"/></defs>
+<text font-family="Arial" font-weight="700" font-size="12" letter-spacing="2.2" fill="#0B3A52">
+  <textPath href="#isoTop" startOffset="50%" text-anchor="middle">MEDICAL DEVICES · QUALITY MANAGEMENT</textPath>
+</text>
+<!-- center content -->
+<text x="130" y="96" text-anchor="middle" font-family="Arial" font-weight="800" font-size="40" fill="#1F6FEB" letter-spacing="1">ISO</text>
+<text x="130" y="122" text-anchor="middle" font-family="Arial" font-weight="800" font-size="22" fill="#0B3A52" letter-spacing="0.5">13485</text>
+<text x="130" y="140" text-anchor="middle" font-family="Arial" font-weight="700" font-size="14" fill="#077E92" letter-spacing="1">: 2016</text>
+<!-- green check -->
+<circle cx="130" cy="160" r="11" fill="#2f9c5a"/>
+<path d="M124.5,160 l3.6,3.6 l6.4,-7.4" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- CERTIFIED banner ribbon -->
+<path d="M34,214 L18,228 L34,242 Z" fill="#0b4a8c"/>
+<path d="M226,214 L242,228 L226,242 Z" fill="#0b4a8c"/>
+<rect x="34" y="200" width="192" height="36" rx="6" fill="url(#isoRing)"/>
+<text x="130" y="224" text-anchor="middle" font-family="Arial" font-weight="800" font-size="14" fill="#ffffff" letter-spacing="2.5">CERTIFIED</text>
+</svg>

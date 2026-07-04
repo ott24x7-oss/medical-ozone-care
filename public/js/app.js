@@ -223,7 +223,7 @@ function buildModal() {
             <select name="interested_product" id="qmProduct">
               <option value="">Select a product…</option>
               <option>Medical Ozone Generator AOT-MD-520</option>
-              <option>Medical Ozone Generator — Digital (V/C Display)</option>
+              <option>Medical Ozone Generator — Digital (Touch Screen)</option>
               <option>Ozone Water &amp; Oil System</option>
               <option>Oxygen Regulator</option>
               <option>Ozone Therapy Accessory Kit</option>
