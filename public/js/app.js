@@ -91,7 +91,7 @@ function buildHeader() {
   el.innerHTML = `
   <nav class="nav ${el.dataset.overDark === "true" ? "over-dark" : "solid"}" id="nav">
     <div class="container nav-inner">
-      <a class="brand" href="/"><img src="/assets/img/logo.svg" alt="${MOC.name}" width="180" height="47"></a>
+      <a class="brand" href="/"><img class="logo-dark" src="/assets/img/logo.svg" alt="${MOC.name}" width="180" height="47"><img class="logo-light" src="/assets/img/logo-light.svg" alt="${MOC.name}" width="180" height="47"></a>
       <ul class="nav-links" id="navLinks">${linkHtml}
         <li class="only-mobile"><a href="${MOC.telLink}">${MOC.phone}</a></li>
       </ul>

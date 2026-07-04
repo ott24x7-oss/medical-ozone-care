@@ -107,6 +107,10 @@ ul { margin: 0; padding: 0; }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .brand { display: flex; align-items: center; gap: 10px; }
 .brand img { height: 42px; width: auto; }
+/* logo swaps to the light version over a dark hero (and back when scrolled/solid) */
+.brand .logo-light { display: none; }
+.nav:not(.scrolled).over-dark .brand .logo-dark { display: none; }
+.nav:not(.scrolled).over-dark .brand .logo-light { display: inline-block; }
 .nav-links { display: flex; align-items: center; gap: 6px; list-style: none; }
 .nav-links a {
   color: var(--navy); font-weight: 500; font-size: .98rem; padding: 9px 14px; border-radius: 100px; transition: background .2s, color .2s;
