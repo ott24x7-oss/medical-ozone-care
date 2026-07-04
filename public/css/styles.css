@@ -516,3 +516,174 @@ body {
 .apps-graphic { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow); }
 .disclaimer-bar { margin-top: 22px; padding: 16px 20px; border-radius: 14px; background: #fff8e8; border: 1px solid rgba(224,168,46,.32); color: #6d4700; font-size: .92rem; line-height: 1.6; }
 .disclaimer-bar strong { color: #5a3c00; }
+
+/* =========================================================
+   HYBRID MORPHISM LAYER
+   • Neumorphism  → background elements (cards, containers, inputs)
+   • Skeuomorphism → functions (buttons, toggles, sliders)
+   • Glassmorphism → layers/overlays (header, modals, toolbars, side panels)
+   Loaded last so it intentionally overrides the flat base above.
+   ========================================================= */
+:root {
+  /* neumorphic canvas + soft dual light/shadow */
+  --neu-bg: #e8edf5;
+  --neu-surface: #e8edf5;
+  --neu-light: rgba(255,255,255,.95);
+  --neu-shadow: rgba(159,174,197,.62);
+  --neu-out: -6px -6px 14px var(--neu-light), 7px 7px 18px var(--neu-shadow);
+  --neu-out-sm: -3px -3px 7px var(--neu-light), 4px 4px 10px var(--neu-shadow);
+  --neu-out-lg: -9px -9px 20px var(--neu-light), 11px 11px 26px var(--neu-shadow);
+  --neu-in: inset 3px 3px 7px var(--neu-shadow), inset -3px -3px 7px var(--neu-light);
+  --neu-radius: 18px;
+  --neu-hairline: rgba(159,174,197,.38);
+  /* glass */
+  --glass-bg: rgba(255,255,255,.62);
+  --glass-panel: rgba(255,255,255,.82);
+  --glass-border: rgba(255,255,255,.75);
+  --glass-shadow: 0 10px 34px rgba(11,58,82,.16);
+  --glass-blur: saturate(160%) blur(16px);
+  /* darker muted for AA contrast on the neutral canvas */
+  --muted: #4e6377;
+}
+
+/* neutral canvas so neumorphic surfaces blend and cast soft shadows */
+body {
+  background:
+    radial-gradient(circle at 12% 4%, rgba(13,183,165,.06), transparent 34%),
+    radial-gradient(circle at 88% 10%, rgba(31,111,235,.05), transparent 36%),
+    var(--neu-bg);
+}
+.bg-ice { background: linear-gradient(180deg, #eef2f8, var(--neu-bg)); }
+.bg-soft { background: var(--neu-bg); }
+
+/* ---- NEUMORPHISM — cards & containers ---- */
+.stat, .feature, .step, .tcard, .info-item, .pcard, .form-card,
+.numlist li, .acc-item, .diagram-wrap, .apps-graphic, .table-wrap,
+.spec-table, .ctable-scroll, .trust-strip {
+  background: var(--neu-surface);
+  border: 1px solid transparent;
+  box-shadow: var(--neu-out);
+}
+.form-card { border-radius: var(--radius-lg); }
+.trust-strip { border-radius: 0; box-shadow: none; border-bottom: 1px solid var(--neu-hairline); }
+.showcase-media, .pd-gallery .main { border: none; box-shadow: var(--neu-out-lg); }
+.pcard { overflow: hidden; }
+.pcard .media { border-bottom: 1px solid var(--neu-hairline); }
+.feature:hover, .pcard:hover, .tcard:hover, .step:hover, .info-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--neu-out-lg);
+  border-color: transparent;
+}
+/* icon tiles inside neu cards get a tactile raised look */
+.feature .ic, .info-item .ic, .step::before, .doc-section h2 .n {
+  box-shadow: 0 6px 14px rgba(4,105,92,.32), inset 0 1px 0 rgba(255,255,255,.4);
+}
+
+/* ---- NEUMORPHISM — inputs (concave / debossed) ---- */
+.field input, .field select, .field textarea, .search-bar input {
+  background: var(--neu-surface);
+  border: 1px solid var(--neu-hairline);
+  box-shadow: var(--neu-in);
+}
+.field input:focus, .field select:focus, .field textarea:focus,
+.search-bar input:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: var(--neu-in), 0 0 0 3px rgba(13,183,165,.30);
+}
+
+/* ---- SKEUOMORPHISM — buttons (tactile, pressable) ---- */
+.btn { text-shadow: 0 1px 1px rgba(0,0,0,.18); }
+.btn-primary {
+  background: linear-gradient(180deg, #18c9b6 0%, var(--teal-d) 52%, var(--teal-x) 100%);
+  border: 1px solid rgba(4,105,92,.55);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 -3px 6px rgba(0,0,0,.18), 0 10px 22px rgba(4,105,92,.34);
+}
+.btn-primary:hover { color: #fff; transform: translateY(-2px); box-shadow: inset 0 1px 0 rgba(255,255,255,.5), inset 0 -3px 6px rgba(0,0,0,.18), 0 16px 30px rgba(4,105,92,.44); }
+.btn-primary:active { transform: translateY(1px); box-shadow: inset 0 3px 9px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.12); }
+.btn-blue {
+  background: linear-gradient(180deg, #4fb0ff 0%, var(--blue) 55%, #1657c4 100%);
+  border: 1px solid rgba(22,87,196,.55);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 -3px 6px rgba(0,0,0,.18), 0 10px 24px rgba(31,111,235,.32);
+}
+.btn-blue:hover { color: #fff; transform: translateY(-2px); box-shadow: inset 0 1px 0 rgba(255,255,255,.5), inset 0 -3px 6px rgba(0,0,0,.18), 0 16px 32px rgba(31,111,235,.42); }
+.btn-blue:active { transform: translateY(1px); box-shadow: inset 0 3px 9px rgba(0,0,0,.34); }
+.btn-wa {
+  background: linear-gradient(180deg, #3ee27a 0%, #25d366 52%, #17a94f 100%);
+  border: 1px solid rgba(23,169,79,.55);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 -3px 6px rgba(0,0,0,.18), 0 10px 22px rgba(23,169,79,.32);
+}
+.btn-wa:hover { color: #fff; transform: translateY(-2px); }
+.btn-wa:active { transform: translateY(1px); box-shadow: inset 0 3px 9px rgba(0,0,0,.34); }
+/* outline = neumorphic raised, presses in */
+.btn-outline {
+  background: var(--neu-surface); color: var(--teal-d);
+  border: 1px solid var(--neu-hairline); text-shadow: none;
+  box-shadow: var(--neu-out-sm);
+}
+.btn-outline:hover { color: var(--teal); border-color: var(--neu-hairline); transform: translateY(-2px); box-shadow: var(--neu-out); }
+.btn-outline:active { transform: translateY(0); box-shadow: var(--neu-in); }
+.fab { background: radial-gradient(circle at 34% 28%, #4ff08a, #25d366 60%, #17a94f); box-shadow: inset 0 2px 2px rgba(255,255,255,.4), inset 0 -3px 6px rgba(0,0,0,.22), 0 12px 26px rgba(23,169,79,.44); }
+.fab:active { transform: scale(.96); box-shadow: inset 0 3px 8px rgba(0,0,0,.34); }
+
+/* ---- SKEUOMORPHISM — sliders ---- */
+input[type="range"] {
+  -webkit-appearance: none; appearance: none; width: 100%; height: 12px;
+  border-radius: 100px; background: linear-gradient(180deg, #d3dbe6, #eef2f8);
+  box-shadow: var(--neu-in); cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none; width: 26px; height: 26px; border-radius: 50%;
+  background: radial-gradient(circle at 34% 30%, #ffffff, #c9d3e0 72%);
+  border: 1px solid #aab6c6; box-shadow: 0 3px 5px rgba(0,0,0,.3), inset 0 1px 1px rgba(255,255,255,.9);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 26px; height: 26px; border-radius: 50%; border: 1px solid #aab6c6;
+  background: radial-gradient(circle at 34% 30%, #ffffff, #c9d3e0 72%); box-shadow: 0 3px 5px rgba(0,0,0,.3);
+}
+input[type="range"]::-moz-range-track { background: transparent; }
+
+/* ---- SKEUOMORPHISM — toggle switch ---- */
+.switch { position: relative; display: inline-block; width: 56px; height: 30px; vertical-align: middle; }
+.switch input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.switch .track { position: absolute; inset: 0; border-radius: 100px; background: linear-gradient(180deg, #c6cfdb, #e3e9f1); box-shadow: var(--neu-in); transition: background .25s; }
+.switch .track::before {
+  content: ""; position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%;
+  background: radial-gradient(circle at 34% 30%, #fff, #d3dbe6 72%); box-shadow: 0 2px 4px rgba(0,0,0,.3), inset 0 1px 1px rgba(255,255,255,.9);
+  transition: transform .25s;
+}
+.switch input:checked + .track { background: linear-gradient(180deg, var(--teal), var(--teal-d)); }
+.switch input:checked + .track::before { transform: translateX(26px); }
+.switch input:focus-visible + .track { box-shadow: var(--neu-in), 0 0 0 3px rgba(13,183,165,.30); }
+input[type="checkbox"], input[type="radio"] { accent-color: var(--teal-d); }
+
+/* ---- GLASSMORPHISM — header, toolbars, panels, modals ---- */
+.nav.scrolled {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border); box-shadow: var(--glass-shadow);
+}
+.tabs {
+  background: var(--glass-bg); -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border); border-radius: 14px; padding: 6px 8px; box-shadow: var(--glass-shadow);
+}
+.doc-nav {
+  background: var(--glass-panel); -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow);
+}
+#quoteModal .form-card {
+  background: var(--glass-panel); -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow);
+}
+#quoteModal .qm-backdrop { background: rgba(8,42,60,.5) !important; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+@media (max-width: 940px) {
+  .nav-links {
+    background: var(--glass-panel);
+    -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
+    border-left: 1px solid var(--glass-border);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .switch .track, .switch .track::before { transition: none; }
+}
