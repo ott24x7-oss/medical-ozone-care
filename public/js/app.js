@@ -336,6 +336,60 @@ function initCounters() {
   nums.forEach((n) => io.observe(n));
 }
 
+/* ---------- Cursor / touch FX (ozone bubbles) ---------- */
+function initCursorFX() {
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const fine = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  // Desktop: soft glow ring + dot that trail the mouse
+  if (fine) {
+    const ring = document.createElement("div"); ring.className = "moc-cursor";
+    const dot = document.createElement("div"); dot.className = "moc-cursor-dot";
+    document.body.append(ring, dot);
+    let x = innerWidth / 2, y = innerHeight / 2, rx = x, ry = y;
+    const loop = () => {
+      rx += (x - rx) * 0.18; ry += (y - ry) * 0.18;
+      ring.style.transform = `translate(${rx}px, ${ry}px)`;
+      dot.style.transform = `translate(${x}px, ${y}px)`;
+      requestAnimationFrame(loop);
+    };
+    window.addEventListener("mousemove", (e) => {
+      x = e.clientX; y = e.clientY; ring.classList.add("on"); dot.classList.add("on");
+    }, { passive: true });
+    document.addEventListener("mouseleave", () => { ring.classList.remove("on"); dot.classList.remove("on"); });
+    const hot = "a,button,.btn,[data-quote],input,select,textarea,.pcard,.tabs button,.switch,label";
+    document.addEventListener("mouseover", (e) => { if (e.target.closest && e.target.closest(hot)) ring.classList.add("hot"); });
+    document.addEventListener("mouseout", (e) => { if (e.target.closest && e.target.closest(hot)) ring.classList.remove("hot"); });
+    requestAnimationFrame(loop);
+  }
+
+  // Both: ripple + rising bubbles on press (mouse click AND mobile touch)
+  const burst = (cx, cy) => {
+    const rip = document.createElement("div"); rip.className = "moc-ripple";
+    rip.style.width = rip.style.height = "70px"; rip.style.left = cx + "px"; rip.style.top = cy + "px";
+    document.body.appendChild(rip);
+    const killRip = () => rip.remove();
+    rip.addEventListener("animationend", killRip); setTimeout(killRip, 800);
+    const n = 3 + Math.floor(Math.random() * 3);
+    for (let i = 0; i < n; i++) {
+      const b = document.createElement("div"); b.className = "moc-bubble";
+      const s = 6 + Math.random() * 8; b.style.width = b.style.height = s + "px";
+      b.style.left = cx + (Math.random() * 30 - 15) + "px";
+      b.style.top = cy + (Math.random() * 10 - 5) + "px";
+      b.style.animationDelay = (Math.random() * 0.12).toFixed(2) + "s";
+      document.body.appendChild(b);
+      const killB = () => b.remove();
+      b.addEventListener("animationend", killB); setTimeout(killB, 1200);
+    }
+  };
+  if ("onpointerdown" in window) {
+    window.addEventListener("pointerdown", (e) => burst(e.clientX, e.clientY), { passive: true });
+  } else {
+    window.addEventListener("mousedown", (e) => burst(e.clientX, e.clientY), { passive: true });
+    window.addEventListener("touchstart", (e) => { const t = e.touches[0]; if (t) burst(t.clientX, t.clientY); }, { passive: true });
+  }
+}
+
 /* ---------- boot ---------- */
 document.addEventListener("DOMContentLoaded", () => {
   buildHeader();
@@ -345,4 +399,5 @@ document.addEventListener("DOMContentLoaded", () => {
   injectIcons();
   initReveals();
   initCounters();
+  initCursorFX();
 });

@@ -687,3 +687,48 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--teal-d); }
 @media (prefers-reduced-motion: reduce) {
   .switch .track, .switch .track::before { transition: none; }
 }
+
+/* =========================================================
+   CURSOR / TOUCH FX — ozone-bubble pointer (desktop + mobile)
+   ========================================================= */
+.moc-cursor {
+  position: fixed; left: 0; top: 0; width: 30px; height: 30px; margin: -15px 0 0 -15px;
+  border-radius: 50%; pointer-events: none; z-index: 9998; opacity: 0;
+  background: radial-gradient(circle, rgba(13,183,165,.30), rgba(31,111,235,.14) 55%, transparent 72%);
+  box-shadow: 0 0 14px rgba(13,183,165,.35);
+  transition: opacity .3s, width .18s, height .18s, margin .18s, background .2s;
+  will-change: transform;
+}
+.moc-cursor.on { opacity: 1; }
+.moc-cursor.hot {
+  width: 54px; height: 54px; margin: -27px 0 0 -27px;
+  background: radial-gradient(circle, rgba(13,183,165,.42), rgba(31,111,235,.22) 55%, transparent 72%);
+}
+.moc-cursor-dot {
+  position: fixed; left: 0; top: 0; width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px;
+  border-radius: 50%; pointer-events: none; z-index: 9999; opacity: 0;
+  background: var(--teal-d); transition: opacity .3s; will-change: transform;
+}
+.moc-cursor-dot.on { opacity: .9; }
+.moc-ripple {
+  position: fixed; border-radius: 50%; pointer-events: none; z-index: 9997;
+  border: 2px solid rgba(13,183,165,.55);
+  animation: mocRipple .6s ease-out forwards;
+}
+@keyframes mocRipple {
+  from { transform: translate(-50%,-50%) scale(.2); opacity: .7; }
+  to   { transform: translate(-50%,-50%) scale(1);  opacity: 0; }
+}
+.moc-bubble {
+  position: fixed; border-radius: 50%; pointer-events: none; z-index: 9997;
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,.92), rgba(13,183,165,.55) 60%, rgba(31,111,235,.4));
+  box-shadow: 0 0 6px rgba(13,183,165,.4);
+  animation: mocBubble .9s ease-out forwards;
+}
+@keyframes mocBubble {
+  0%   { transform: translate(-50%,-50%) scale(1);  opacity: .9; }
+  100% { transform: translate(-50%, calc(-50% - 48px)) scale(.4); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .moc-cursor, .moc-cursor-dot, .moc-ripple, .moc-bubble { display: none !important; }
+}
