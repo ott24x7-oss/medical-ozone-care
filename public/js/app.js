@@ -339,29 +339,39 @@ function initCounters() {
 /* ---------- Cursor / touch FX (ozone bubbles) ---------- */
 function initCursorFX() {
   if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  const fine = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
-  // Desktop: soft glow ring + dot that trail the mouse
-  if (fine) {
-    const ring = document.createElement("div"); ring.className = "moc-cursor";
-    const dot = document.createElement("div"); dot.className = "moc-cursor-dot";
-    document.body.append(ring, dot);
-    let x = innerWidth / 2, y = innerHeight / 2, rx = x, ry = y;
-    const loop = () => {
-      rx += (x - rx) * 0.18; ry += (y - ry) * 0.18;
-      ring.style.transform = `translate(${rx}px, ${ry}px)`;
-      dot.style.transform = `translate(${x}px, ${y}px)`;
-      requestAnimationFrame(loop);
-    };
-    window.addEventListener("mousemove", (e) => {
-      x = e.clientX; y = e.clientY; ring.classList.add("on"); dot.classList.add("on");
-    }, { passive: true });
-    document.addEventListener("mouseleave", () => { ring.classList.remove("on"); dot.classList.remove("on"); });
-    const hot = "a,button,.btn,[data-quote],input,select,textarea,.pcard,.tabs button,.switch,label";
-    document.addEventListener("mouseover", (e) => { if (e.target.closest && e.target.closest(hot)) ring.classList.add("hot"); });
-    document.addEventListener("mouseout", (e) => { if (e.target.closest && e.target.closest(hot)) ring.classList.remove("hot"); });
+  // Glow ring + dot follow the pointer — mouse on desktop, finger drag on mobile
+  const ring = document.createElement("div"); ring.className = "moc-cursor";
+  const dot = document.createElement("div"); dot.className = "moc-cursor-dot";
+  document.body.append(ring, dot);
+  let x = innerWidth / 2, y = innerHeight / 2, rx = x, ry = y;
+  const loop = () => {
+    rx += (x - rx) * 0.18; ry += (y - ry) * 0.18;
+    ring.style.transform = `translate(${rx}px, ${ry}px)`;
+    dot.style.transform = `translate(${x}px, ${y}px)`;
     requestAnimationFrame(loop);
+  };
+  const show = () => { ring.classList.add("on"); dot.classList.add("on"); };
+  const hide = () => { ring.classList.remove("on"); dot.classList.remove("on"); };
+  const move = (cx, cy) => { x = cx; y = cy; show(); };
+  const jump = (cx, cy) => { x = rx = cx; y = ry = cy; show(); }; // snap to start so it doesn't fly in on touch
+  const hot = "a,button,.btn,[data-quote],input,select,textarea,.pcard,.tabs button,.switch,label";
+
+  if ("onpointermove" in window) {
+    window.addEventListener("pointermove", (e) => move(e.clientX, e.clientY), { passive: true });
+    window.addEventListener("pointerdown", (e) => jump(e.clientX, e.clientY), { passive: true });
+    window.addEventListener("pointerup", (e) => { if (e.pointerType !== "mouse") hide(); }, { passive: true });
+    window.addEventListener("pointercancel", (e) => { if (e.pointerType !== "mouse") hide(); }, { passive: true });
+    document.addEventListener("pointerover", (e) => { if (e.target.closest && e.target.closest(hot)) ring.classList.add("hot"); });
+    document.addEventListener("pointerout", (e) => { if (e.target.closest && e.target.closest(hot)) ring.classList.remove("hot"); });
+  } else {
+    window.addEventListener("mousemove", (e) => move(e.clientX, e.clientY), { passive: true });
+    window.addEventListener("touchstart", (e) => { const t = e.touches[0]; if (t) jump(t.clientX, t.clientY); }, { passive: true });
+    window.addEventListener("touchmove", (e) => { const t = e.touches[0]; if (t) move(t.clientX, t.clientY); }, { passive: true });
+    window.addEventListener("touchend", hide, { passive: true });
   }
+  document.addEventListener("mouseleave", hide);
+  requestAnimationFrame(loop);
 
   // Both: ripple + rising bubbles on press (mouse click AND mobile touch)
   const burst = (cx, cy) => {
