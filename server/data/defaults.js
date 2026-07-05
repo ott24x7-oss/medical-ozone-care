@@ -18,11 +18,11 @@ export const defaultSettings = {
     hours: "Mon–Sat · 10:00–19:00 IST",
   },
   seo: {
-    siteTitle: "Medical Ozone Care — Medical Ozone Generator AOT-MD-520",
+    siteTitle: "Ozone Therapy Machine Price in India | Medical Ozone Generators for Sale — Medical Ozone Care",
     siteDescription:
-      "Medical Ozone Care supplies the AOT-MD-520 medical ozone generator, a fully touch-screen automated digital ozone generator, an ozone water & oil system, oxygen regulators and accessories. Product information, specifications and quotation enquiry. New Delhi, India.",
+      "Buy medical ozone generators and ozone therapy machines in India — see prices for clinic, home-use and hair-therapy models (AOT-MD-520, digital touch-screen, ozone water & oil). CE-certified, for sale with pan-India delivery. New Delhi, India.",
     keywords:
-      "Medical Ozone Care, Medical Ozone Generator, AOT-MD-520, Ozone Generator Specifications, Medical Ozone Equipment India, Ozone Therapy Equipment, ozone water oil machine",
+      "ozone therapy machine price, medical ozone generator price, ozone therapy cost in India, ozone therapy machine for home use, ozone hair treatment machine price, ozone injection price, medical ozone therapy machine for sale, medical ozone generator india, best ozone therapy machine",
     ogImage: "/assets/img/products/device-hero.svg",
     baseUrl: "https://www.medicalozonecare.co.in",
   },

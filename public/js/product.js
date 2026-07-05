@@ -20,8 +20,12 @@
   }
 
   async function render(p) {
-    document.getElementById("pTitle").textContent = `${p.name} (${p.model}) — Medical Ozone Care`;
+    document.getElementById("pTitle").textContent = `${p.name} Price in India — ${p.model} | Medical Ozone Care`;
     document.getElementById("pDesc").setAttribute("content", p.shortDescription);
+    // canonical for the clean product URL
+    let can = document.querySelector('link[rel="canonical"]');
+    if (!can) { can = document.createElement("link"); can.rel = "canonical"; document.head.appendChild(can); }
+    can.href = location.origin + "/product?id=" + p.id;
     document.getElementById("bcName").textContent = p.name;
 
     // JSON-LD product schema (SEO / rich results)
